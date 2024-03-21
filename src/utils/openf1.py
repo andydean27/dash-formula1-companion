@@ -74,7 +74,7 @@ def fetch_current_locations(session_key):
     df_data = pd.DataFrame(data)
 
     if not df_data.empty:
-        df_data = df_data.groupby('driver_number').last()
+        return df_data.groupby('driver_number').last()
     
     return pd.DataFrame(columns = ['date', 'driver_number','meeting_key', 'session_key','x','y','z'])
 
