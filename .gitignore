@@ -1,0 +1,18 @@
+# .gitignore
+
+# Exclude the ./venv directory
+/venv/
+venv/
+
+# Exclude all files and directories with the name "__pycache__"
+__pycache__/
+
+# Exclude the .vscode directory (Visual Studio Code settings)
+.vscode/
+
+# Exclude any compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+
