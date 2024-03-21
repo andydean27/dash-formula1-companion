@@ -100,8 +100,8 @@ def fetch_first_lap_locations(session_key, driver_number):
 
 def fetch_current_intervals(session_key):
     
-    # Fetches the latest location data, within 5s of now
-    time = (datetime.now(timezone.utc) - timedelta(seconds = 5)).isoformat()
+    # Fetches the latest location data, within 0.5s of now
+    time = (datetime.now(timezone.utc) - timedelta(seconds = 0.5)).isoformat()
 
     response = urlopen(f'https://api.openf1.org/v1/intervals?session_key={session_key}&date>{time}')
     data = json.loads(response.read().decode('utf-8'))
