@@ -53,7 +53,7 @@ def update_track(n, path):
     df_drivers = openf1.fetch_drivers('latest')
 
     #Locations
-    df_location = openf1.fetch_debug_locations('latest', datetime.datetime(2024, 3, 9, 17, 35, 40))
+    df_location = openf1.fetch_current_locations('latest')
     df_location = df_location.merge(df_drivers[[
         'driver_number',
         'name_acronym',

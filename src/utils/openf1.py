@@ -66,8 +66,8 @@ def fetch_debug_locations(session_key, start_time):
     return pd.DataFrame(columns = ['date', 'driver_number','meeting_key', 'session_key','x','y','z'])
 
 def fetch_current_locations(session_key):
-    # Fetches the latest location data, within 5s of now
-    time = (datetime.now(timezone.utc) - timedelta(seconds = 5)).isoformat()
+    # Fetches the latest location data, within 0.5s of now
+    time = (datetime.now(timezone.utc) - timedelta(seconds = 0.5)).isoformat()
 
     response = urlopen(f'https://api.openf1.org/v1/location?session_key={session_key}&date>{time}')
     data = json.loads(response.read().decode('utf-8'))
