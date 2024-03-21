@@ -4,6 +4,9 @@
 /venv/
 venv/
 
+/cache/
+cache/
+
 # Exclude all files and directories with the name "__pycache__"
 __pycache__/
 
@@ -14,5 +17,4 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-
 
